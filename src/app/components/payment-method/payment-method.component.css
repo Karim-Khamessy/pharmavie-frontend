@@ -1,0 +1,16 @@
+.card{
+    height: 240px;
+    width: 670px;
+    border-radius: 12px;
+    font-weight: bold;
+}
+
+.card-body{
+    padding:  10px;
+}
+.form-control {
+    border-radius: 12px;
+}
+.col-12{
+    margin-bottom: 20px;
+}

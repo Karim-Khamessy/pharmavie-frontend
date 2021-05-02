@@ -1,0 +1,88 @@
+
+.rounded-pill{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px 8px;
+    
+    position: static;
+    width: 27px;
+    height: 18px;
+    left: 0px;
+    top: 0px;
+    
+    /* C2/E */
+    
+    background: #F4F8EC;
+    border-radius: 12px;
+    
+    /* Inside Auto Layout */
+    
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 4px;
+
+}
+p{
+
+    position: static;
+    height: 27px;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+
+    font-weight: bold;
+   
+    /* S4/Default */
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+    /* identical to box height */
+    
+    
+    /* C1/A */
+    
+    color: #151515;
+    
+    
+    /* Inside Auto Layout */
+    
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 16px 0px;
+
+}
+span{
+    position: static;
+    left: 25%;
+    right: 25%;
+    top: 0%;
+    bottom: 0%;
+
+    /* S6/Default */
+
+    font-family: Poppins;
+
+
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+    /* identical to box height */
+
+
+    color: #7854F7;
+
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 3px;
+}

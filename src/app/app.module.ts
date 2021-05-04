@@ -31,6 +31,12 @@ import { PaymentFormComponent } from './components/payment-form/payment-form.com
 import { AdditionalInfosComponent } from './components/additional-infos/additional-infos.component';
 import { ConfirmationFormComponent } from './components/confirmation-form/confirmation-form.component';
 import { LoginComponent } from './pages/login/login.component';
+import { NavProductsComponent } from './components/nav-products/nav-products.component';
+import { NavTreeComponent } from './components/nav-tree/nav-tree.component';
+import { CategoriesListComponent } from './components/categories-list/categories-list.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { BrandsFilterComponent } from './components/brands-filter/brands-filter.component';
+import { RatingsFilterComponent } from './components/ratings-filter/ratings-filter.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +50,7 @@ import { LoginComponent } from './pages/login/login.component';
     PaymentMethodComponent,
     SigninFormComponent,
     OrderProductComponent,
+<<<<<<< HEAD
     BillingListComponent,
     ProductDescriptionComponent,
     DescriptionReviewComponent,
@@ -62,12 +69,24 @@ import { LoginComponent } from './pages/login/login.component';
     AdditionalInfosComponent,
     ConfirmationFormComponent,
     LoginComponent
+=======
+    NavProductsComponent,
+    NavTreeComponent,
+    CategoriesListComponent,
+    FooterComponent,
+    BrandsFilterComponent,
+    RatingsFilterComponent
+>>>>>>> 898c80660bda406faa93730b60ccafed5bda71b7
   ],
   imports: [
     BrowserModule,
     AppRoutingModule, 
+<<<<<<< HEAD
     NgbModule, 
     ROUTING
+=======
+    NgbModule
+>>>>>>> 898c80660bda406faa93730b60ccafed5bda71b7
   ],
   providers: [],
   bootstrap: [AppComponent]

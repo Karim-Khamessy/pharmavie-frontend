@@ -1,0 +1,28 @@
+ul {
+    list-style-type: none;
+    margin: 20px 0px;
+}
+
+h6{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+    /* identical to box height */
+
+
+    /* C1/A */
+
+    color: #151515;
+}
+a{
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    /* identical to box height */
+
+    color: #7854F7;
+ }

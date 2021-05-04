@@ -1,0 +1,26 @@
+<div class="row justify-content-between">
+    <div class="col-4">
+        <div class="row title">
+            Payment Method
+        </div>
+        <div class="row subtitle">
+            Please enter your payment method
+        </div>
+    </div>
+    <div class="col-3 subtitle align-self-end" style="position: absolute; right: -80px;">
+        Step 3 of 5 
+    </div>
+</div>
+<div class="row">
+    <app-payment-method ></app-payment-method>
+</div>
+<div class="row">
+    <app-shipping-item [title]="'Cash'" [image]="'../../../assets/intigo.svg'"></app-shipping-item>
+</div>
+<div class="row">
+    <app-shipping-item [title]="'D17'" [image]="'../../../assets/d17.svg'"></app-shipping-item>
+</div>
+<div class="row">
+    <app-shipping-item [title] ="'Flouci'" [image]="'../../../assets/flouci.svg'"></app-shipping-item>
+</div>
+

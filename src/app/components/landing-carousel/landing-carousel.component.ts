@@ -5,16 +5,16 @@ import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
   selector: 'app-landing-carousel',
   templateUrl: './landing-carousel.component.html',
   styleUrls: ['./landing-carousel.component.css'], 
-  providers : [NgbCarouselConfig]
+  providers : [NgbCarouselConfig], 
+  
 })
 export class LandingCarouselComponent implements OnInit {
-  
-
+  images =[ '../../../assets/carousel1.png'
+           ,'../../../assets/carousel2.png']
+ 
   constructor(config : NgbCarouselConfig) {
-    config.interval = 2000 ; 
-    
-    config.keyboard = false ; 
-    config.pauseOnHover = false ; 
+    config.interval = 10000 ; 
+   
    }
 
   ngOnInit(): void {

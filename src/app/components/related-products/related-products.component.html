@@ -1,0 +1,29 @@
+<div class="row cont">
+    <div class="col-12">
+        <div class="row justify-content-between">
+            <div class="col-3">
+                Related Products
+            </div>
+            <div class="col-3">
+                <button class="btn btn-light" style="right: 0px; position: absolute; bottom : 5px ; font-weight: bold;">
+                    More Products >
+                </button>
+            </div>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3">
+            <app-product-card [image]="image"></app-product-card>
+        </div>
+        <div class="col-3">
+            <app-product-card [image]="'../../../assets/product.svg'" ></app-product-card>
+        </div>
+        <div class="col-3">
+            <app-product-card [image]="'../../../assets/product.svg'"></app-product-card>
+        </div>
+        <div class="col-3">
+            <app-product-card [image]="'../../../assets/product.svg'"></app-product-card>
+        </div>
+    </div>
+</div>

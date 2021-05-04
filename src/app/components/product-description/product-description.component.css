@@ -1,0 +1,39 @@
+*{
+    font-size : 12px  ; 
+}
+.star {
+    color : #b0c4de ; 
+    font-size: 20px;
+    
+}
+.full{
+    color:  gold;
+}
+.title{
+    font-size: 22px;
+    font-weight: bold;
+}
+.t1{
+    color :#A9A9A9 ; 
+    font-size: 12px;
+}
+.pharmacy{
+    font-size: 15px;
+    font-weight: bold;
+   
+    
+}
+button{
+    background-color: #DCD2FF;
+    color : #7854F7 ; 
+    border-radius : 12px ; 
+}
+.comp {
+    border : 1px solid gray ;
+    padding : 5px ; 
+    background-color:#D1D1D1
+}
+.badge{
+    color : #7854F7 ; 
+    margin-right: 10px;
+}

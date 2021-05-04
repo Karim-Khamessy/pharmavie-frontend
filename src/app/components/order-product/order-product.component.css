@@ -1,8 +1,30 @@
 .card{
     width: 436px;
-    height: 154px;
+    height: 170px;
     font-size: 12px;
 }
 button {
     font-size : 12px ; 
+    padding : 0px ; 
+    margin-bottom : 10px ; 
+}
+.star {
+    color : #b0c4de ; 
+    font-size: 20px;
+    
+}
+.full{
+    color:  gold;
+}
+.price{
+    color : #7854F7 ; 
+    font-size: 14px;
+    font-weight: bold;
+}
+.title{
+    font-size: 14px;
+    font-weight: bold;
+}
+.details{
+    color : #A9A9A9 ; 
 }

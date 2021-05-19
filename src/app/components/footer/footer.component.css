@@ -4,25 +4,15 @@ ul {
 }
 
 h6{
-    font-family: Poppins;
-    font-style: normal;
-    font-weight: 600;
     font-size: 18px;
-    line-height: 27px;
-    /* identical to box height */
-
-
-    /* C1/A */
-
+    font-weight: bold ; 
     color: #151515;
 }
 a{
-    font-family: Open Sans;
-    font-style: normal;
-    font-weight: normal;
     font-size: 14px;
-    line-height: 19px;
-    /* identical to box height */
-
     color: #7854F7;
+ }
+
+ .row {
+     margin-top : 50px ; 
  }

@@ -8,18 +8,13 @@
             <li><a href="">Pharmacy</a></li>
             <li><a href="">Baby</a></li>
         </ul>
-        <button class="btn">More products  ></button>
+        <button class="btn" [routerLink]="['/products']" >More products></button>
     </div>
-    <div class="col-3">
-        <app-product-card [image]="'../../../assets/product.svg'"></app-product-card>
-
+    <div class="col-9">
+        <div class="row">
+        <div class="col-4" *ngFor="let product of products">
+            <app-product-card [product]="product"></app-product-card>
+        </div>
     </div>
-    <div class="col-3">
-        <app-product-card [image]="'../../../assets/product.svg'"></app-product-card>
-
     </div>
-    <div class="col-3">
-        <app-product-card [image]="'../../../assets/product.svg'"></app-product-card>
-    </div>
-
-</div>
+    

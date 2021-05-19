@@ -8,7 +8,7 @@ ol.breadcrumb {
   /* Display list items side by side */
   ol.breadcrumb li {
     display: inline;
-    font-size: 18px;
+    font-size: 12px;
   }
   
 

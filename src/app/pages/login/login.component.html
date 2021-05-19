@@ -1,13 +1,13 @@
 
-<ng-template #content let-modal style="width: 838px; height: 576px;">
+<ng-template #content let-modal style="width: 838px; height: 576px; border-radius: 12px">
     <div class="modal-body" >
         <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')" style="width: 20px;">
             <span aria-hidden="true">&times;</span>
           </button>
       
         <div class="row" >
-            <div class="col-5">
-                <img src="../../../assets/login.svg" alt="login" style="border-radius : 12px">
+            <div class="col-5" style="padding-left: 0px ">
+                <img src="../../../assets/login.svg" alt="login" style="border-radius : 12px" width="100%">
             </div>
             <div class="col-7">
                 <form >
@@ -57,4 +57,10 @@
 </ng-template>
 
 <button class="btn btn-lg btn-outline-primary" (click)="open(content)">Launch demo modal</button>
-
+<!-- 
+<app-nav-tree></app-nav-tree>
+<app-footer></app-footer>
+<app-brands-filter></app-brands-filter>
+<app-ratings-filter></app-ratings-filter>
+<app-nav-products></app-nav-products>
+<app-categories-list></app-categories-list> -->

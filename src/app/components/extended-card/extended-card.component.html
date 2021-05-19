@@ -1,13 +1,13 @@
 <div class="card">
     <div class="row" style="height: 100%;">
-        <div class="col-sm-4" >
-            <embed src="../../../assets/product.svg" height="268px" width="280px"/>
+        <div class="col-sm-4 container" >
+            <img [src]="product.path"  alt="productImage">
         </div>
         
         <div class="col-sm-5">
             
-                <p class="card-title">Product Title</p>
-                <p class="card-subtitle">Space for a small product descritpion</p>
+                <p class="card-title">{{product.name}}</p>
+                <p class="card-subtitle">{{product.description}}</p>
             <div class="row">
                
             </div>
@@ -40,7 +40,7 @@
         <div class="col-sm-3" >
             <div class="row" style="height: 100%; padding: 20px;">
                 <div class="col-12">
-                    <p class="card-title">36.99 USD</p>
+                    <p class="card-title">{{ product.publicPrice }} TND</p>
                 </div>
                 <div class="col-12">
                     <p class="card-subtitle"><s>48.5 USD</s></p>
@@ -52,12 +52,12 @@
                     <p class="card-subtitle">Delivery in 1 day</p>
                 </div>
                 <div class="col-12">
-                    <button class="product btn">
+                    <button class="product btn" [routerLink]="['/description',product.name]"  >
                         Product Detail  >
                     </button>
                 </div>
                 <div class="col-12 align-self-end" style="padding-right: 0px;">
-                    <button class="btn wish">
+                    <button class="btn wish" (click)="addtoCart()">
                         <i class="fa fa-heart-o" aria-hidden="true"></i>
                         Add to wish list
                     </button>

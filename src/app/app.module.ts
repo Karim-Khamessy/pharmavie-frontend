@@ -37,6 +37,23 @@ import { CategoriesListComponent } from './components/categories-list/categories
 import { FooterComponent } from './components/footer/footer.component';
 import { BrandsFilterComponent } from './components/brands-filter/brands-filter.component';
 import { RatingsFilterComponent } from './components/ratings-filter/ratings-filter.component';
+import { ProductsComponent } from './pages/products/products.component';
+import { PriceSliderComponent } from './components/price-slider/price-slider.component';
+import { FormsModule } from '@angular/forms';
+import { NgxSliderModule } from '@angular-slider/ngx-slider';
+import {HttpClientModule} from '@angular/common/http' ; 
+import { ActionReducer, MetaReducer, StoreModule } from '@ngrx/store';
+import { ROOT_REDUCERS } from './reducers';
+import { StoreRouterConnectingModule } from '@ngrx/router-store';
+import { StoreDevtools, StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { localStorageSync } from 'ngrx-store-localstorage';
+import { EffectsModule } from '@ngrx/effects';
+import { ProductsEffects } from './shared/products/effects/products.effects';
+
+export function localStorageSyncReducer (reducer : ActionReducer<any>) : ActionReducer<any> {
+  return localStorageSync({keys : ['orderProducts'], rehydrate : true})(reducer) ; 
+}
+const metaReducers : Array<MetaReducer<any, any>> = [localStorageSyncReducer] ; 
 
 @NgModule({
   declarations: [
@@ -50,7 +67,6 @@ import { RatingsFilterComponent } from './components/ratings-filter/ratings-filt
     PaymentMethodComponent,
     SigninFormComponent,
     OrderProductComponent,
-<<<<<<< HEAD
     BillingListComponent,
     ProductDescriptionComponent,
     DescriptionReviewComponent,
@@ -68,25 +84,32 @@ import { RatingsFilterComponent } from './components/ratings-filter/ratings-filt
     PaymentFormComponent,
     AdditionalInfosComponent,
     ConfirmationFormComponent,
-    LoginComponent
-=======
-    NavProductsComponent,
-    NavTreeComponent,
-    CategoriesListComponent,
-    FooterComponent,
-    BrandsFilterComponent,
-    RatingsFilterComponent
->>>>>>> 898c80660bda406faa93730b60ccafed5bda71b7
+    LoginComponent, 
+    NavTreeComponent, 
+    NavProductComponent , 
+    NavProductsComponent, 
+    CategoriesListComponent, 
+    FooterComponent, 
+    BrandsFilterComponent, 
+    RatingsFilterComponent,
+    ProductsComponent,
+    PriceSliderComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule, 
-<<<<<<< HEAD
     NgbModule, 
-    ROUTING
-=======
-    NgbModule
->>>>>>> 898c80660bda406faa93730b60ccafed5bda71b7
+    ROUTING, 
+    FormsModule, 
+    NgxSliderModule, 
+    HttpClientModule, 
+    StoreModule.forRoot(ROOT_REDUCERS, 
+      {metaReducers}), 
+      EffectsModule.forRoot([ProductsEffects]) , 
+    StoreRouterConnectingModule.forRoot() , 
+    StoreDevtoolsModule.instrument({
+      name : 'NgRx Pharmavie app'
+    }), 
   ],
   providers: [],
   bootstrap: [AppComponent]

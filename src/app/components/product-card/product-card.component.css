@@ -3,6 +3,7 @@
     border-radius:12px ;
     height: 323px;
     width:  269px;
+    cursor : pointer ; 
     
     
 }
@@ -31,4 +32,15 @@ button{
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+.container {
+    height: 200px;
+    width: 100%;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }

@@ -1,0 +1,8 @@
+.title{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.custom-slider .ngx-slider .ngx-slider-pointer .ngx-slider-pointer-min {
+    background : rgb(255, 255, 0) !important;
+  }

@@ -22,3 +22,15 @@ button {
 label{
     font-size : 14px
 }
+
+.modal-body{
+    padding: 0px ; 
+    
+}
+
+.col-7{
+    padding : 20px 10px ; 
+}
+.modal-content{
+    border-radius: 50px !important;
+}

@@ -1,7 +1,7 @@
 .card{
     
     width: 468px;
-    height: 720px;
+    max-height: 720px;
     border-radius: 12px;
 } 
 .card-body{
@@ -16,7 +16,7 @@
     font-weight: bold;
 }
 .products {
-    max-height: 400px;
+    max-height: 300px;
     overflow-y: auto;
     overflow-x: hidden;
     margin-top: 20px;

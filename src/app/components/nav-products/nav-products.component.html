@@ -1,7 +1,7 @@
-<div class="row">
+<div class="row justify-content-between">
     <div class="col">
 		<div class="pagination">
-			<label class="text-muted">page: </label>
+			<label class="text-muted">Page: </label>
 			<!--<a href="#">&laquo;</a>-->
 			<a href="#">1</a>
 			<a class="active" href="#">2</a>
@@ -11,12 +11,14 @@
 	</div>
     <div class="col">
 		<button class="btn"> 
-			Show more products ∨
+			Show more products
+			<i class="fa fa-arrow-down" aria-hidden="true"></i>
+
 		</button>
 	</div>
 	
-    <div class="col">
-			<span class="badge rounded-pill">14</span>
+    <div class="col-2 products">
+			<span class="badge rounded-pill">{{products.length}}</span>
 			<label class="text-muted">products</label>
 	</div>
 </div>

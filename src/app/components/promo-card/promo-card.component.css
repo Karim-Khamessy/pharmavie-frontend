@@ -32,3 +32,10 @@ button{
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
+.container {
+    height: 200px;
+}
+img{
+    object-fit: contain;
+}

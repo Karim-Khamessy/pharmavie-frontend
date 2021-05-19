@@ -12,35 +12,19 @@ div{
 }
 
 p{
-    position: static;
-    height: 27px;
-    left: 0px;
-    right: 0px;
-    top: 0px;
+  font-size : 18px ; 
+  font-weight: bold;
+  margin-bottom :0px  
 
-    font-weight: bold;
-   
-    /* S4/Default */
-    
-    font-family: Poppins;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 27px;
-    /* identical to box height */
-    
-    
-    /* C1/A */
-    
-    color: #151515;
-    
-    
-    /* Inside Auto Layout */
-    
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-    margin: 16px 0px;
+}
 
+li{
+    border : 0px ; 
+    padding : 8px 20px ; 
+}
+
+ol{
+    width: 268px;
+    height: 211px;
 }
 

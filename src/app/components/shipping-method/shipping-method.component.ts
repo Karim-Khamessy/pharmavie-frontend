@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-shipping-method',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./shipping-method.component.css']
 })
 export class ShippingMethodComponent implements OnInit {
-
+  @Input() product: any ; 
   constructor() { }
 
   ngOnInit(): void {

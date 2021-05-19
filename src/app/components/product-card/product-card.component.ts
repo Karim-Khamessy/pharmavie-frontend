@@ -8,7 +8,7 @@ import { DomSanitizer} from '@angular/platform-browser';
   styleUrls: ['./product-card.component.css']
 })
 export class ProductCardComponent implements OnInit {
-  @Input() image : string =''; 
+  @Input() product : any ; 
   sanitizer: DomSanitizer;
   constructor(sanitizer : DomSanitizer) { 
     this.sanitizer  = sanitizer ; 
@@ -17,10 +17,9 @@ export class ProductCardComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  photoUrl(){
-    console.log(this.image,'hedhi l imageeeeeee') ; 
-    return this.sanitizer.bypassSecurityTrustResourceUrl(this.image)  ; 
+  // photoUrl(){
+  //   return this.sanitizer.bypassSecurityTrustResourceUrl(this.image)  ; 
 
-  }
+  // }
 
 }

@@ -45,3 +45,21 @@ form .form-control:focus{
       background-color:#E5704B ;
       
   }
+
+
+  .dropdown-menu{
+      
+      width: 450px; 
+      top : -20px ; 
+      margin-left: 142px ;
+  }
+  .pofileDropDown{
+    width: 100px;
+    margin-left: 0;
+    margin-top: 50px;
+}
+
+.profile{
+    display: inline;
+}
+

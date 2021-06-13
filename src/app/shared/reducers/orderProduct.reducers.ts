@@ -16,9 +16,9 @@ const initialState: State ={
 
 export const reducer = createReducer(
     initialState , 
-    on(OrderProductActions.addToCart ,(state, {product}) =>  {
+    on(OrderProductActions.addToCart ,(state, {product, quantity}) =>  {
         const index = state.products.findIndex(pro => pro.id == (product.id)) ;
-        const newProduct ={...product, 'quantity' : 1} 
+        const newProduct ={...product, 'quantity' :  quantity} 
        if ( index !== -1) 
          { 
              return ({products : [...state.products ]})  ;} 

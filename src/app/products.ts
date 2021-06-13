@@ -1,14 +1,14 @@
 export class Product {
-    id : String | undefined;
-    name : String;
+    id : String | undefined ;
+    name : String ;
     description: String;
     laboratory: String;
-    conditioning: String;
-    dosage: String;
-    form: String;
-    quantity : number ; 
-    presentation: String;
-    therapeutiClass : String;
+    conditioning: String ;
+    dosage: String ;
+    form: String  ;
+    quantity : number  ; 
+    presentation: String ;
+    therapeutiClass : String  ;
     subClass: String;
     specification: String;
     DurationOfConversation: String;
@@ -32,7 +32,7 @@ export class Product {
          use: string,
          path: string,
          contreIndications: string,
-         tableOfContent : string,
+         tableOfContent: string,
          ) {
 
        

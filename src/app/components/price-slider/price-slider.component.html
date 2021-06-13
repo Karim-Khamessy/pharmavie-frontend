@@ -1,3 +1,4 @@
+<form #priceForm="ngForm">
 <p class="title">Price</p>
 <div class="custom-slider">
     <ngx-slider [(value)]="minValue" [(highValue)]="maxValue" [options]="options"></ngx-slider>
@@ -5,15 +6,16 @@
 </div>
 <div class="row">
     <div class="col-6">
-        <p>Min value: <input type="number" class="form-control" [(ngModel)]="minValue"></p> 
+        <p>Min value: <input name="minValue" type="number" class="form-control" [(ngModel)]="minValue"></p> 
     </div>
     <div class="col-6">
-    <p>Max value: <input type="number" class="form-control" [(ngModel)]="maxValue"></p>
+    <p>Max value: <input type="number" name="maxValue" class="form-control" [(ngModel)]="maxValue"></p>
 
     </div>
 
 </div>
 <div class="row">
-    <button class="btn" (click)="reset()">reset</button>
+    <button class="btn" (click)="handleSubmit(priceForm.value)">reset</button>
 </div>
+</form>
 

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Product } from 'src/app/products';
 import { CartService } from '../cart-page/cart.service';
 import { ProductsService } from '../../services/products.service';
-import { Store } from '@ngrx/store';
+import { props, Store } from '@ngrx/store';
 import * as fromProduct from '../../shared/reducers/product.reducer' ; 
 import {ProductActions} from '../../shared/products/actions/index' ; 
 import { Observable } from 'rxjs';
@@ -22,13 +22,12 @@ export class ProductsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log('ca marche') ; 
     this.getProducts() ; 
   
   }
 
 getProducts () : void {
-  this.store.dispatch(ProductActions.loadProduct()) ; 
+  this.store.dispatch(ProductActions.loadProduct({offset : '1' , limit:'2'})) ; 
 }
 
 

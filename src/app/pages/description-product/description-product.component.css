@@ -1,0 +1,14 @@
+
+.frame {
+    background-color: rgba(219, 209, 255, 0.6);
+     width: 500px;
+      height: 436px;
+       border-radius: 10px;
+        margin-bottom: 20px
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}

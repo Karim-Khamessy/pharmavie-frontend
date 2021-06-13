@@ -49,9 +49,12 @@ import { StoreDevtools, StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { localStorageSync } from 'ngrx-store-localstorage';
 import { EffectsModule } from '@ngrx/effects';
 import { ProductsEffects } from './shared/products/effects/products.effects';
+import { RegisterComponent } from './components/register/register.component';
+import { HomeLayoutComponent } from './layouts/home-layout/home-layout.component';
+import { LoginLayoutComponent } from './layouts/login-layout/login-layout.component';
 
 export function localStorageSyncReducer (reducer : ActionReducer<any>) : ActionReducer<any> {
-  return localStorageSync({keys : ['orderProducts'], rehydrate : true})(reducer) ; 
+  return localStorageSync({keys : ['orderProducts', 'product'], rehydrate : true})(reducer) ; 
 }
 const metaReducers : Array<MetaReducer<any, any>> = [localStorageSyncReducer] ; 
 
@@ -93,7 +96,10 @@ const metaReducers : Array<MetaReducer<any, any>> = [localStorageSyncReducer] ;
     BrandsFilterComponent, 
     RatingsFilterComponent,
     ProductsComponent,
-    PriceSliderComponent
+    PriceSliderComponent,
+    RegisterComponent,
+    HomeLayoutComponent,
+    LoginLayoutComponent
   ],
   imports: [
     BrowserModule,

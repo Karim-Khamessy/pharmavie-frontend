@@ -4,7 +4,7 @@ import { Product } from "src/app/products";
 
 export const addToCart = createAction(
     '[OrderProducts] add to cart ', 
-    props<{product : Product}>()) ; 
+    props<{product : Product , quantity : number}>()) ; 
 
 export const removeFromCart = createAction(
     '[OrderProducts] remove item from cart' , 

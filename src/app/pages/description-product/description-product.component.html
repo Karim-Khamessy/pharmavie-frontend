@@ -1,8 +1,9 @@
+<div class="container">
 <div class="row justify-content-center">
     <div class="col-6 " style="justify-content: center;">
         <div class="row">
-        <div style="background-color: rgba(219, 209, 255, 0.6); width: 500px; height: 436px; border-radius: 10px; margin-bottom: 20px;">
-            <img src="../../../assets/panadol.png" alt="panadol">
+        <div class="frame">
+            <img [src]="product.path" alt="panadol">
 
         </div>
     </div>
@@ -10,7 +11,7 @@
         <app-pharmacy-card></app-pharmacy-card>
     </div>
     <div class="col-6">
-        <app-product-description></app-product-description>
+        <app-product-description [product]= "product" ></app-product-description>
         <app-description-review></app-description-review>
     </div>
 
@@ -18,3 +19,5 @@
 </div>
 <app-related-products></app-related-products>
 <app-footer></app-footer>
+</div>
+

@@ -1,5 +1,8 @@
+import { ThisReceiver } from '@angular/compiler';
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-login',
@@ -8,8 +11,11 @@ import { NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 })
 export class LoginComponent {
   closeResult ='' ; 
+  messageError ="" ; 
 
-  constructor(private modalService : NgbModal) { 
+  constructor(private modalService : NgbModal ,
+             private userService : UserService, 
+             private route : Router) { 
   }
 
   ngOnInit(): void {
@@ -31,6 +37,18 @@ export class LoginComponent {
     } else {
       return `with: ${reason}`;
     }
+  }
+
+  login(value: any){
+    console.log(value) ; 
+    this.userService.login(value).subscribe((response )=>{
+      let token = response.accessToken; 
+      localStorage.setItem("pharmavie_token",token) ; 
+      this.route.navigate(["landingPage"]) ; 
+    },(error)=>{
+      console.log(error) ; 
+      this.messageError = error ; 
+    }) ; 
   }
 
 }

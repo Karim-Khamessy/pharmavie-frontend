@@ -15,16 +15,39 @@
             <option value="2">Two</option>
             <option value="3">Three</option>
           </select>
-      <input class="form-control" type="text"  placeholder="Search Products, categories ..."  style="color: #A9A9A9" aria-label="Search" #searchField >
-      <button class="btn search"  >
+      <input #search class="form-control" type="text"  placeholder="Search Products, categories ..."  (keyup)="searchItem(searchField.value)"  style="color: #A9A9A9" aria-label="Search" #searchField >
+      <button class="btn search" >
         <i class="fa fa-search" aria-hidden="true"></i>
       </button>
     </form>
+
+      
+        <div ngbDropdown #myDrop="ngbDropdown" class="d-inline-block">
+          <div ngbDropdownMenu *ngFor="let item of searchItems" aria-labelledby="dropdownManual">
+            <button ngbDropdownItem 
+            (click)="handleClose()"
+            [routerLink]="['/description', item._id]"
+            >{{ item.name }}</button>
+          </div>
+        </div>
       </div>
+
+
       <div class="col-1" style="vertical-align: 0px;">
-        <a class="navbar-brand" href="#">
-          <i class="fa fa-user" aria-hidden="true"></i>
-        </a>
+        
+          <div ngbDropdown class="profile">
+            <a class="navbar-brand" >
+              <i class="fa fa-user" aria-hidden="true" id="dropdownBasic1"  ngbDropdownToggle></i>
+            </a>
+            <div ngbDropdownMenu class="pofileDropDown" aria-labelledby="dropdownBasic1">
+              <button *ngIf="token" ngbDropdownItem>Profile</button>
+              <button *ngIf="token" ngbDropdownItem (click)="logout()">Déconnexion</button>
+              <button *ngIf="!token" ngbDropdownItem [routerLink]="['/login']" routerLinkActive="router-link-active" >Connexion</button>
+              <button *ngIf="!token" ngbDropdownItem [routerLink]="['/register']" routerLinkActive="router-link-active" >Créer un compte</button>
+
+            </div>
+        
+        </div>
         <a class="navbar-brand" [routerLink]="['/cart']" routerLinkActive="active" >
           <span class="badge ">{{items.length}}</span>
           <i class="fa fa-shopping-cart" aria-hidden="true"></i>

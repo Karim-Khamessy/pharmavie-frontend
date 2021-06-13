@@ -21,7 +21,7 @@ export class ExtendedCardComponent implements OnInit {
   }
   addtoCart () {
     console.log('product added to cart') ; 
-    this.store.dispatch(OrderProductActions.addToCart({ product : this.product}))
+    this.store.dispatch(OrderProductActions.addToCart({ product : this.product , quantity : 1}))
   }
   
 

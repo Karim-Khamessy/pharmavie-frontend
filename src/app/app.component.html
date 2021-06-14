@@ -1,8 +1,17 @@
 <div class="app">
+<<<<<<< HEAD
 <app-navbar [items]= "products$ | async"></app-navbar>
 <div class="container">
     
     <router-outlet (activate)="resetPosition()"></router-outlet>
     
 </div>
+=======
+    <app-navbar [items]= "products$ | async"></app-navbar>
+    <router-outlet (activate)="resetPosition($event)">
+       
+    </router-outlet>
+    
+
+>>>>>>> 5b60fd22d6b34088e88c37413c1092cfc3c45161
 </div>

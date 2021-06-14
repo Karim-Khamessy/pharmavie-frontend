@@ -1,0 +1,76 @@
+<!-- This snippet uses Font Awesome 5 Free as a dependency. You can download it at fontawesome.io! -->
+
+
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-10 col-xl-7 mx-auto">
+        <div class="card card-signin flex-row my-5">
+          <div class="card-img-left d-none d-md-flex">
+             <!-- Background image for card set in CSS! -->
+          </div>
+          <div class="card-body">
+            <h1 class=" text-center">Register</h1>
+            <form class="form-signin" #SignUpForm="ngForm"  >
+              <div class="form-group">
+
+                <label for="userName">User Name</label>
+                <input
+                required
+                ngModel name='userName' #userName="ngModel" id= "userName" type="text" class="form-control">
+                <!-- <div class="alert alert-danger"  >
+                    <div  >  User Name required</div>
+                </div> -->
+             </div>
+
+             <div class="form-group">
+              <label for="email">Email Adresse</label>
+              <input
+              required
+              ngModel name='email' #email="ngModel" id= "email" type="email" class="form-control">
+              <!-- <div class="alert alert-danger" >
+                  <div   >  Email Adresse required</div>
+              </div> -->
+           </div>
+
+              <hr>
+
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input
+                required
+                ngModel name='password' #password="ngModel" id= "password" type="password" class="form-control">
+                <button style="position:fixed; right: 50px;">
+                  <i class="fa fa-eye" aria-hidden="true"></i>
+
+              </button>
+                <!-- <div class="alert alert-danger" >
+                    <div   >   Password is  required</div>
+                </div> -->
+             </div>
+
+             <div class="form-group">
+              <label for="repeatPassword">Repeat Password</label>
+              <input
+              required
+              ngModel name='repeatPassword' #repeatPassword="ngModel" id= "repeatPassword" type="password" class="form-control">
+              <!-- <div class="alert alert-danger" >
+                  <div   >   repeatPassword is  required</div>
+              </div> -->
+           </div>
+
+
+              <h6 style="color: red" ></h6>
+
+
+
+              <button    [disabled] ="SignUpForm.invalid"   class="btn btn-lg btn-primary btn-block text-uppercase" (click)="onSubmit(SignUpForm.value)" type="submit">Register</button>
+              <a    class="d-block text-center mt-2 small" [routerLink]="['/login']" routerLinkActive="router-link-active" >Already had an Account ! Sign in</a>
+
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+

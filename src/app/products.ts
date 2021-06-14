@@ -1,4 +1,5 @@
 export class Product {
+<<<<<<< HEAD
     id : String | undefined;
     name : String;
     description: String;
@@ -9,6 +10,18 @@ export class Product {
     quantity : number ; 
     presentation: String;
     therapeutiClass : String;
+=======
+    id : String | undefined ;
+    name : String ;
+    description: String;
+    laboratory: String;
+    conditioning: String ;
+    dosage: String ;
+    form: String  ;
+    quantity : number  ; 
+    presentation: String ;
+    therapeutiClass : String  ;
+>>>>>>> 5b60fd22d6b34088e88c37413c1092cfc3c45161
     subClass: String;
     specification: String;
     DurationOfConversation: String;
@@ -32,7 +45,11 @@ export class Product {
          use: string,
          path: string,
          contreIndications: string,
+<<<<<<< HEAD
          tableOfContent : string,
+=======
+         tableOfContent: string,
+>>>>>>> 5b60fd22d6b34088e88c37413c1092cfc3c45161
          ) {
 
        

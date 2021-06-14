@@ -23,6 +23,11 @@ export class AppComponent {
 
   }
 
+<<<<<<< HEAD
   resetPosition(){
+=======
+  resetPosition(event : Event){
+    window.scrollTo(0,0) ; 
+>>>>>>> 5b60fd22d6b34088e88c37413c1092cfc3c45161
   }
 }

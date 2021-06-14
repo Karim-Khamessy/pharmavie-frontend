@@ -1,5 +1,13 @@
+<<<<<<< HEAD
 import { Component } from '@angular/core';
 import { NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
+=======
+import { ThisReceiver } from '@angular/compiler';
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
+import { UserService } from 'src/app/services/user.service';
+>>>>>>> 5b60fd22d6b34088e88c37413c1092cfc3c45161
 
 @Component({
   selector: 'app-login',
@@ -8,8 +16,16 @@ import { NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 })
 export class LoginComponent {
   closeResult ='' ; 
+<<<<<<< HEAD
 
   constructor(private modalService : NgbModal) { 
+=======
+  messageError ="" ; 
+
+  constructor(private modalService : NgbModal ,
+             private userService : UserService, 
+             private route : Router) { 
+>>>>>>> 5b60fd22d6b34088e88c37413c1092cfc3c45161
   }
 
   ngOnInit(): void {
@@ -33,4 +49,19 @@ export class LoginComponent {
     }
   }
 
+<<<<<<< HEAD
+=======
+  login(value: any){
+    console.log(value) ; 
+    this.userService.login(value).subscribe((response )=>{
+      let token = response.accessToken; 
+      localStorage.setItem("pharmavie_token",token) ; 
+      this.route.navigate(["landingPage"]) ; 
+    },(error)=>{
+      console.log(error) ; 
+      this.messageError = error ; 
+    }) ; 
+  }
+
+>>>>>>> 5b60fd22d6b34088e88c37413c1092cfc3c45161
 }

@@ -21,17 +21,26 @@ const initialState: State ={
 export const reducer = createReducer(
     initialState , 
     on(ProductActions.addToCart ,(state, {product}) =>  {
+<<<<<<< HEAD
         console.log("hedha l product eli yjina ") ; 
+=======
+>>>>>>> 5b60fd22d6b34088e88c37413c1092cfc3c45161
         return ({...state , products :  product })
     }
     ) , 
     on(ProductActions.addToPromoProducts ,(state, {product}) =>  {
+<<<<<<< HEAD
         console.log("hedha l product eli yjina ") ; 
+=======
+>>>>>>> 5b60fd22d6b34088e88c37413c1092cfc3c45161
         return ({...state , promoProducts :  product })
     }
     ) , 
     on(ProductActions.addToBestSellingProduts ,(state, {product}) =>  {
+<<<<<<< HEAD
         console.log("hedha l product eli yjina ") ; 
+=======
+>>>>>>> 5b60fd22d6b34088e88c37413c1092cfc3c45161
         return ({...state , bestSellingProducts :  product })
     }
     ) , 

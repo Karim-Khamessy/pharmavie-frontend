@@ -44,4 +44,26 @@ form .form-control:focus{
       top: 5px;
       background-color:#E5704B ;
       
+<<<<<<< HEAD
   }
+=======
+  }
+
+
+  .dropdown-menu{
+      
+      width: 450px; 
+      top : -20px ; 
+      margin-left: 142px ;
+  }
+  .pofileDropDown{
+    width: 100px;
+    margin-left: 0;
+    margin-top: 50px;
+}
+
+.profile{
+    display: inline;
+}
+
+>>>>>>> 5b60fd22d6b34088e88c37413c1092cfc3c45161

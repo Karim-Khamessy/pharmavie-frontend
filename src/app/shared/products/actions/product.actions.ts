@@ -12,6 +12,10 @@ export const removeFromCart = createAction(
 ); 
 export const loadProduct = createAction(
     '[Products] Load Products', 
+<<<<<<< HEAD
+=======
+    props<{offset : string , limit : string}>()
+>>>>>>> 5b60fd22d6b34088e88c37413c1092cfc3c45161
 ) ; 
 
 

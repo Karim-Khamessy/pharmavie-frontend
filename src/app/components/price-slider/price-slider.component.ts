@@ -25,4 +25,11 @@ export class PriceSliderComponent implements OnInit {
     this.maxValue = 100; 
   }
 
+<<<<<<< HEAD
+=======
+  handleSubmit (value :any): void{
+    console.log(value) ; 
+  }
+
+>>>>>>> 5b60fd22d6b34088e88c37413c1092cfc3c45161
 }

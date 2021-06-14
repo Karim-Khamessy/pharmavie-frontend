@@ -49,10 +49,19 @@ import { StoreDevtools, StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { localStorageSync } from 'ngrx-store-localstorage';
 import { EffectsModule } from '@ngrx/effects';
 import { ProductsEffects } from './shared/products/effects/products.effects';
+<<<<<<< HEAD
 import { UpdateProfileComponent } from './pages/update-profile/update-profile.component';
 
 export function localStorageSyncReducer (reducer : ActionReducer<any>) : ActionReducer<any> {
   return localStorageSync({keys : ['orderProducts'], rehydrate : true})(reducer) ; 
+=======
+import { RegisterComponent } from './components/register/register.component';
+import { HomeLayoutComponent } from './layouts/home-layout/home-layout.component';
+import { LoginLayoutComponent } from './layouts/login-layout/login-layout.component';
+
+export function localStorageSyncReducer (reducer : ActionReducer<any>) : ActionReducer<any> {
+  return localStorageSync({keys : ['orderProducts', 'product'], rehydrate : true})(reducer) ; 
+>>>>>>> 5b60fd22d6b34088e88c37413c1092cfc3c45161
 }
 const metaReducers : Array<MetaReducer<any, any>> = [localStorageSyncReducer] ; 
 
@@ -95,7 +104,13 @@ const metaReducers : Array<MetaReducer<any, any>> = [localStorageSyncReducer] ;
     RatingsFilterComponent,
     ProductsComponent,
     PriceSliderComponent,
+<<<<<<< HEAD
     UpdateProfileComponent
+=======
+    RegisterComponent,
+    HomeLayoutComponent,
+    LoginLayoutComponent
+>>>>>>> 5b60fd22d6b34088e88c37413c1092cfc3c45161
   ],
   imports: [
     BrowserModule,

@@ -56,6 +56,18 @@ export const selectBestSellingProductState = createFeatureSelector<fromProduct.S
 export const selectBestSellingProducts = createSelector(
     selectBestSellingProductState , 
     fromProduct.selectBestSellingProducts 
+<<<<<<< HEAD
 )
+=======
+) ; 
+
+
+export const getProductById =(id: any) => createSelector(
+    selectProducts,
+     
+    (products )=> {
+        return products.filter((item )=> item.id == id )[0]}
+) ; 
+>>>>>>> 5b60fd22d6b34088e88c37413c1092cfc3c45161
 
 

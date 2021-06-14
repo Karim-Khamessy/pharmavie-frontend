@@ -1,0 +1,58 @@
+<div class="card">
+    <button class="btn details " (click)="removeFromCart()">
+                <i class="fa fa-times" aria-hidden="true" style="color :black " ></i>
+                
+            </button>
+    <div class="row">
+        <div class="col-4 container">
+            <img [src]="product.path" alt="order-product-image"  />
+        </div>
+        <div class="col-8">
+            <div class="row title">
+                {{product.name.toString() | uppercase}}
+            </div>
+            <div class="row">
+                <div class="col-4 details">Farm : </div>
+                <div class="col-8">Tharamis Farm</div>
+            </div>
+            <div class="row">
+                <div class="col-4 details">Freshness: </div>
+                <div class="col-8">1 day old</div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                <ngb-rating [(rate)]="currentRate" [max]="5">
+                    <ng-template let-fill="fill" let-index="index">
+                    <span class="star" [class.full]="fill === 100">&#9733;</span>
+                </ng-template>
+                </ngb-rating>
+            </div>
+            </div>
+            <div class="row justify-content-between">
+                <div class="col-6">
+                    <div class="row price">
+                        {{product.publicPrice}} DT 
+                    </div>
+                    <div class="row details">
+                       <strong> <s>48.56 USD</s> </strong>
+                    </div>
+                </div>
+                <div class="col-5">
+                    
+                            <div class="row ">
+                                <div class="row align-items-center">
+                                    <span style="font-weight: bold; margin-right: 5px;">
+                                    Quantité:    
+                                </span>
+                                 
+                                <input type="number" class="form-control"  name="quantity" [(ngModel)]="quantity"
+                                    (ngModelChange)="handleChange()"
+                                style="background-color: #D1D1D1 ; height: 25px; width: 50px; padding: 0px 5px;">
+                                </div>
+                            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  

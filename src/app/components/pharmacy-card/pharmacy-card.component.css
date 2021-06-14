@@ -1,0 +1,35 @@
+.card{
+    width: 430px;
+    height: 136px;
+    border-radius : 10px ; 
+ 
+    
+}
+.choosen{
+    background-color : rgba(210, 252, 165, 0.27)  ; 
+    border : 2px solid #70C217 ; 
+}
+*{
+    font-size: 11px;
+}
+.title{
+    font-size: 15px;
+    font-weight: bold;
+}
+.subtitle{
+    color : #B9BCC3 ; 
+}
+button{
+    border-radius: 10px; 
+    font-size: 14px;
+    margin : 10px 0px ; 
+    width: 90px;
+}
+.card-body{
+    padding : 10px ; 
+}
+.des{
+    color : #B9BCC3 ; 
+    font-weight: bold ;
+
+}

@@ -1,0 +1,25 @@
+<div class="row">
+    <div class="col-7">
+        <div class="row">
+            <app-shipping-method></app-shipping-method>
+        </div>
+        <div class="row">
+            <app-payment-form></app-payment-form>
+        </div>
+        <div class="row">
+            <app-additional-infos></app-additional-infos>
+        </div>
+        <div class="row">
+            <app-confirmation-form></app-confirmation-form>
+        </div>
+    </div>
+    <div class="col-5">
+        <div class="row">
+            <app-billing-list [products]= "products$ | async"></app-billing-list>
+
+        </div>
+    <div class="row">
+        <app-pharmacy-map></app-pharmacy-map>
+    </div>
+    </div>
+</div>

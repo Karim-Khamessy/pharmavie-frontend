@@ -1,0 +1,8 @@
+<div class="app">
+<app-navbar [items]= "products$ | async"></app-navbar>
+<div class="container">
+    
+    <router-outlet (activate)="resetPosition()"></router-outlet>
+    
+</div>
+</div>

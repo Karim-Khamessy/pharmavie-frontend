@@ -1,0 +1,32 @@
+<div class="row">
+    <app-nav-tree></app-nav-tree>
+</div>
+<div class="row">
+    <div class="col-3">
+        <app-categories-list></app-categories-list>
+        <app-brands-filter></app-brands-filter>
+        <app-ratings-filter></app-ratings-filter>
+        <app-price-slider></app-price-slider>
+        <div class="row justify-content-around">
+            <div class="col">
+                <button class="btn"  style="background-color: #7854F7; color: white">
+                    Apply
+                </button>
+            </div>
+            <div class="col">
+                <button class="btn btn-light" style="color : #A9A9A9">
+                    Reset
+                </button>
+            </div>
+
+        </div>
+    </div>
+    <div class="col-8">
+        <div *ngFor="let product of (products$ | async)">
+            <app-extended-card  [product]="product" ></app-extended-card>
+
+        </div>
+    </div>
+</div>
+<app-nav-products [products]="products$ | async"></app-nav-products>
+<app-footer></app-footer>

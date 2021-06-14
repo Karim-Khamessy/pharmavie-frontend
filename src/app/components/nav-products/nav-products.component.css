@@ -1,0 +1,48 @@
+button{
+    width: 217px;
+    height: 47px;
+    background: #7854F7;
+    color:white;
+    border-radius: 12px;
+    font-size: 15px ; 
+    font-weight: bold;
+}
+.pagination  {
+    align-items:baseline;
+}
+
+
+.pagination a {
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+  }
+  
+.pagination a.active {
+    color: #7854F7;
+}
+  
+
+  
+
+span{
+    font-size: 12px;
+    line-height: 18px;
+    color: #7854F7;
+}
+
+.products{
+    position :relative ;
+    text-align: right;
+     
+    
+    
+}
+.row{
+    margin : 20px 0px ; 
+    
+}
+*{
+    font-size : 12px ; 
+}

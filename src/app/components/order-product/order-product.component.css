@@ -1,0 +1,49 @@
+.card{
+    width: 436px;
+    height: 150px;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+.star {
+    color : #b0c4de ; 
+    font-size: 20px;
+    
+}
+.full{
+    color:  gold;
+}
+.price{
+    color : #7854F7 ; 
+    font-size: 14px;
+    font-weight: bold;
+}
+.title{
+    font-size: 14px;
+    font-weight: bold;
+}
+.details{
+    color : #A9A9A9 ; 
+}
+
+.container {
+    height: 140px;
+    width: 100%;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+button {
+    position:absolute;
+    right: 0px;
+    
+    z-index: 10;
+
+    
+    
+
+}

@@ -1,0 +1,26 @@
+.title{
+    font-weight: bold;
+    font-size: 18px;
+}
+.subtitle{
+    color :#A9A9A9 ;  
+    font-size: 12px;
+}
+.card{
+    width:670px ;
+    height: 30px;
+    background-color : #F9F9F9 ; 
+    border-radius :12px ;
+    padding: 0px 20px;  
+    margin : 10px 0px ; 
+    font-size : 14px ; 
+    
+}
+button {
+    width: 218px;
+    height: 56px;
+    color: white ; 
+    border-radius : 12px ; 
+    font-weight: bold;
+    background-color: #7854F7;
+}

@@ -1,0 +1,14 @@
+*{
+    font-weight: bold;
+
+}
+.form-control{
+    border-radius: 12px;
+}
+.col-6{
+    margin-bottom: 10px;
+}
+button{
+    background-color : #7854F7 ; 
+    color : white ; 
+}

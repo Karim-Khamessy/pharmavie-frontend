@@ -1,0 +1,10 @@
+.title{
+    font-size:18px ;
+    font-weight: bold;
+}
+button{
+    position: absolute; 
+    right: 0px;
+    top: -15px;
+    font-weight: bold;
+}

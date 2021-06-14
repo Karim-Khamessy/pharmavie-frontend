@@ -1,0 +1,25 @@
+.card{
+    width:670px ;
+    height: 48px;
+    background-color : #F9F9F9 ; 
+    border-radius :12px ;
+    padding: 0px 10px;  
+    font-weight: bold;
+    margin : 10px 0px ; 
+    
+}
+.card-body{
+    padding: 0px;
+    
+}
+#price {
+    color : green ; 
+    margin-right: 10px;
+}
+
+
+img {
+    position: absolute;
+    right: 10px;
+    top: 5px ; 
+}

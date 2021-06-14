@@ -1,0 +1,18 @@
+<div class="card" [routerLink]="['/description',product.name]" routerLinkActive="router-link-active" >
+    <div class="container">
+    <img [src]="product.path"/>
+
+    </div>
+    <div class="card-body">
+      <p class="card-title">{{product.name}}</p>
+      <p class="card-subtitle mb-2 text-muted">Space for a small product description hello there =hdhsjfkqh</p>
+      <div class="row justify-content-between">
+          <div class="col-4">
+              <p><strong>2.5 DT</strong></p>
+          </div>
+          <div class="justify-content-end">
+              <button class="btn">Buy now</button>
+          </div>
+      </div>
+    </div>
+  </div>

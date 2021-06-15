@@ -16,7 +16,12 @@
                         <label for="username" class="form-label">Username</label>
                     </div>
                     <div class="col-12">
-                        <input type="username" class="form-control" placeholder="Username">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text" id="inputGroupPrepend">@</span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Username" value="RaE12" required>
+                          </div>
                     </div>
                 </div>
                 <div class="row" style="margin-bottom: 20px;">
@@ -24,24 +29,39 @@
                         <label for="email" class="form-label">Email Address</label>
                     </div>
                     <div class="col-12">
-                        <input type="email" class="form-control" placeholder="Email Address">
+                        <input type="email" class="form-control" value="exemple@gmail.com" placeholder="Email Address">
                     </div>
                 </div>
                 <div class="row" style="margin-bottom: 20px;">
                     <div class="col-12">
-                    <label for="password" class="form-label">Password</label>
+                    <label for="password" class="form-label">Current Password</label>
                     </div>
                     <div class="col-12">
-                    <input type="password" class="form-control" placeholder="Password">
+                        <input id="currentpassword" type="password" class="form-control" value="1&25TfZER" onfocus="value=''" placeholder="Current password">
                     </div>
+                </div>    
+                <div class="row" style="margin-bottom: 20px;">
+                    <div class="col-12">
+                        <label for="password" class="form-label">New Password</label>
+                    </div>
+                    <div class="col-12">
+                    <input id="password" type="password" class="form-control" value="1&25TfZER" onfocus="value=''" placeholder="New Password" onkeyup='verify();' onchange="verify()" required>
+                    <small id="passwordHelpInline" class="text-muted">
+                        Must be 8-20 characters long.
+                    </small>                    
+                    </div>
+                    <div class="col-12">
+                        <input id="confirm_password" type="password" class="form-control"value="1&25TfZER" onfocus="value=''" placeholder="Confirm new password" onchange="verify()" onkeyup='verify();' required>
+                    </div>
+                    <span id="message"></span>
                 </div>
                 <div class="row justify-content-center">
-                    <button class="btn" style="background-color : #7854F7">
+                    <button id="update" class="btn" type="submit" style="background-color : #7854F7">
                         Save changes
                     </button>
                 </div>
                 <div class="row justify-content-center">
-                    <button class="btn" style="background-color :#EF4358">
+                    <button class="btn" type="reset" style="background-color :#EF4358">
                         Cancel
                     </button>
                 </div>
@@ -51,6 +71,4 @@
         </div>
         </div>
 </ng-template>
-
-<button class="btn btn-lg btn-outline-primary" (click)="open(content)">Launch demo modal</button>
 

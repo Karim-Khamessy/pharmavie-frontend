@@ -27,13 +27,19 @@ export const reducer = createReducer(
     on(ProductActions.addToPromoProducts ,(state, {product}) =>  {
         return ({...state , promoProducts :  product })
     }
-    ) , 
+    ),
+    on(ProductActions.filterProducts,(state,{form})=>{
+        console.log(form) ; 
+        let newProducts = state.products.filter(item => item.publicPrice > form.value.price.maxValue) ; 
+        return ({...state, products : newProducts}) ; 
+    }) , 
     on(ProductActions.addToBestSellingProduts ,(state, {product}) =>  {
         return ({...state , bestSellingProducts :  product })
     }
     ) , 
     on(ProductActions.removeFromCart , (state, {product}) =>({...state ,  products : state.products.filter(pro => pro.id !== product.id )})
-)) ; 
+)
+) ; 
 
 export const selectProducts = (state : State) => state.products ; 
 export const selectPromoProducts = (state : State) => state.promoProducts ; 

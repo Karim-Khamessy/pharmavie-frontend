@@ -6,14 +6,14 @@
         
         <div class="col-sm-5">
             
-                <p class="card-title">{{product.name}}</p>
+                <p class="card-title">{{ product.name }}</p>
                 <p class="card-subtitle">{{product.description}}</p>
             <div class="row">
                
             </div>
             <div class="col-12" style="margin-top: 30px;">
                 <div class="row">
-                    <ngb-rating [(rate)]="currentRate" [max]="5"></ngb-rating>
+                    <ngb-rating [(rate)]="product.rating" [max]="5"></ngb-rating>
                 </div>
             <div class="row">
                 <div class="col">Freshness</div>
@@ -52,7 +52,7 @@
                     <p class="card-subtitle">Delivery in 1 day</p>
                 </div>
                 <div class="col-12">
-                    <button class="product btn" [routerLink]="['/description',product.name]"  >
+                    <button class="product btn" [routerLink]="['/description',product.id]"  >
                         Product Detail  >
                     </button>
                 </div>

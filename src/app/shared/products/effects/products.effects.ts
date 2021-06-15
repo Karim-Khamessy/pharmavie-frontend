@@ -18,6 +18,16 @@ export class ProductsEffects {
                     catchError(()=> EMPTY)
                 )}),
     )}) ;  
+    loadProductsByCategory$ = createEffect(() => {
+        return this.actions$.pipe(
+                ofType(ProductActions.getProductsByCategory.type), 
+                concatMap((action : {category: string })=> { 
+                    return this.productService.getProductsByCategory(action.category)
+                .pipe(
+                    map(product => ProductActions.addToCart({product : product}) ), 
+                    catchError(()=> EMPTY)
+                )}),
+    )}) ;
 
     loadPromotionProducts$ = createEffect(() => {
         return this.actions$.pipe(

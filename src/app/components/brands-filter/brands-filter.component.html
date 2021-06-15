@@ -1,25 +1,18 @@
-<form >
+<div [formGroup]="form">
+    <p> Brands </p>
     <ol class="list-group">
-        <p> Brands </p>
+       
     <li class="list-group-item">
-        <input class="form-check-input" type="checkbox" value="" aria-label="...">
-        First checkbox 
+        <input class="form-check-input" type="checkbox" formControlName="simed" id="simed">
+        SIMED
     </li>
     <li class="list-group-item">
-        <input class="form-check-input" type="checkbox" value="" aria-label="...">
-        Second checkbox
+        <input class="form-check-input" type="checkbox" formControlName="teriak" id="teriak">
+        TERIAK
     </li>
     <li class="list-group-item">
-        <input class="form-check-input" type="checkbox" value="" aria-label="...">
-        Third checkbox
-    </li>
-    <li class="list-group-item">
-        <input class="form-check-input" type="checkbox" value="" aria-label="...">
-        Fourth checkbox
-    </li>
-    <li class="list-group-item">
-        <input class="form-check-input" type="checkbox" value="" aria-label="...">
-        Fifth checkbox
+        <input class="form-check-input" type="checkbox" formControlName="saiph" id="saiph">
+        SAIPH
     </li>
     </ol>
-</form>
+</div>

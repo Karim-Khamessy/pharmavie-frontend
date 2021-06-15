@@ -1,8 +1,11 @@
-
+<div [formGroup]="form">
+    <p>Ratings</p>
     <ol class="list-group">
-        <p>Ratings</p>
+    
         <li class="list-group-item">
-            <input class="form-check-input" type="checkbox" value="" aria-label="...">
+            <input class="form-check-input" type="checkbox" 
+                id="five"
+                formControlName="five">
             <div class="row">
             <span class="fa fa-star checked"></span>
             <span class="fa fa-star checked"></span>
@@ -12,7 +15,7 @@
             </div>
         </li>
         <li class="list-group-item">
-            <input class="form-check-input" type="checkbox" value="" aria-label="...">
+            <input formControlName="four" id="four" class="form-check-input" type="checkbox" value="" aria-label="...">
             <div class="row">
                 <span class="fa fa-star checked"></span>
                 <span class="fa fa-star checked"></span>
@@ -22,7 +25,7 @@
             </div>
         </li>
         <li class="list-group-item">
-            <input class="form-check-input" type="checkbox" value="" aria-label="...">
+            <input formControlName="three" id="three" class="form-check-input" type="checkbox" value="3" aria-label="...">
             <div class="row">
                 <span class="fa fa-star checked"></span>
                 <span class="fa fa-star checked"></span>
@@ -32,7 +35,7 @@
             </div>
         </li>
         <li class="list-group-item">
-            <input class="form-check-input" type="checkbox" value="" aria-label="...">
+            <input formControlName="two" id="two" class="form-check-input" type="checkbox" value="4" aria-label="...">
             <div class="row">
                 <span class="fa fa-star checked"></span>
                 <span class="fa fa-star checked"></span>
@@ -42,7 +45,7 @@
             </div>   
         </li> 
         <li class="list-group-item">
-            <input class="form-check-input" type="checkbox" value="" aria-label="...">
+            <input class="form-check-input" formControlName="one" id="one" type="checkbox" value="5" aria-label="...">
             <div class="row">
                 <span class="fa fa-star checked"></span>
                 <i class="fa fa-star-o" aria-hidden="true"></i>
@@ -52,3 +55,5 @@
             </div>
         </li>
     </ol>
+
+</div>

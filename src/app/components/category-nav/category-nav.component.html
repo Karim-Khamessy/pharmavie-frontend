@@ -1,60 +1,13 @@
 <nav class="navbar navbar-expand-lg  ">
     
       <div class="collapse navbar-collapse" id="navbarSupportedContent" style="justify-content: center;">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0" *ngFor="let item of Category">
     
-          <li class="nav-item ">
+          <li class="nav-item" [routerLink]="['/category', item.value]" routerLinkActive="router-link-active"  (click)="navCategory(item.value)" >
             <div class="nav-link" role="button">
-              Pneumologie
+              {{item.name}}
             </div>
           
-          </li>
-          <li class="nav-item" >
-            <div class="nav-link" href="#" role="button" >
-              Metabolisme et nutrition
-            </div>
-          </li> 
-            <li class="nav-item " >
-            <div class="nav-link " href="#"  role="button">
-              Homeopatihe
-            </div>
-        
-          </li>
-          <li class="nav-item " >
-            <div class="nav-link " href="#"  role="button">
-              Dermatologie
-            </div>
-        
-          </li>
-          <li class="nav-item " >
-            <div class="nav-link " href="#"  role="button">
-              Antalgiques
-            </div>
-        
-          </li>
-          <li class="nav-item " >
-            <div class="nav-link " href="#"  role="button">
-              Rhumatologie
-            </div>
-        
-          </li>
-          <li class="nav-item " >
-            <div class="nav-link " href="#"  role="button">
-              Gastro-enterlogie
-            </div>
-        
-          </li>
-          <li class="nav-item">
-            <div class="nav-link" href="#" role="button">
-              Cardiologie et angiologie
-            </div>
-            
-          </li>
-          <li class="nav-item">
-            <div class="nav-link" href="#"  role="button">
-              Otologie
-            </div>
-           
           </li>
          
         </ul>

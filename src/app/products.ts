@@ -15,6 +15,7 @@ export class Product {
     publicPrice: Number;
     use: String;
     path: String;
+    rating : number ; 
     contreIndications: String;
     tableOfContent : String;
      constructor(name : string,
@@ -33,6 +34,7 @@ export class Product {
          path: string,
          contreIndications: string,
          tableOfContent: string,
+         rating : number
          ) {
 
        
@@ -53,5 +55,6 @@ export class Product {
        this.contreIndications = contreIndications;
        this.tableOfContent = tableOfContent;
        this.quantity = 1 ; 
+       this.rating = rating
      }
    }

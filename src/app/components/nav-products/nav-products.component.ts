@@ -13,12 +13,14 @@ import {ProductActions} from '../../shared/products/actions/index' ;
 })
 export class NavProductsComponent implements OnInit {
 @Input() products : any ; 
+offset ='1' ; 
+limit ='6' ; 
   constructor( private store : Store<fromProduct.State> ) { }
 
   ngOnInit(): void {
   }
   getProducts () : void {
-    this.store.dispatch(ProductActions.loadProduct({offset : '1' , limit:'4'})) ; 
+    this.store.dispatch(ProductActions.loadProduct({offset : this.offset , limit: this.limit})) ; 
   }
 
 }

@@ -30,3 +30,13 @@ export const addToPromoProducts = createAction(
 export const loadBestSellingProducts$ = createAction(
     '[Products] Load BestSelling Products' , 
 ) ; 
+
+export const filterProducts = createAction(
+    '[Products] filter products' , 
+    props<{form : any}>()
+) ; 
+
+export const getProductsByCategory = createAction(
+    '[Products] getProductsByCategories' , 
+    props<{category : string}>()
+) ; 

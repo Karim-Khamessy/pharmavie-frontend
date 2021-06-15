@@ -39,7 +39,7 @@ import { BrandsFilterComponent } from './components/brands-filter/brands-filter.
 import { RatingsFilterComponent } from './components/ratings-filter/ratings-filter.component';
 import { ProductsComponent } from './pages/products/products.component';
 import { PriceSliderComponent } from './components/price-slider/price-slider.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgxSliderModule } from '@angular-slider/ngx-slider';
 import {HttpClientModule} from '@angular/common/http' ; 
 import { ActionReducer, MetaReducer, StoreModule } from '@ngrx/store';
@@ -104,6 +104,7 @@ const metaReducers : Array<MetaReducer<any, any>> = [localStorageSyncReducer] ;
   imports: [
     BrowserModule,
     AppRoutingModule, 
+    ReactiveFormsModule, 
     NgbModule, 
     ROUTING, 
     FormsModule, 

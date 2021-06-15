@@ -30,10 +30,11 @@ export class NavbarComponent implements OnInit {
     this.token = localStorage.getItem("pharmavie_token") ; 
 
   }
-searchItem(value : string){
+searchItem(value : String){
   if (value.length >0){
-  this.productService.searchProduct(value).subscribe((item : any)=>{
+  this.productService.searchProduct(value.toLowerCase()).subscribe((item : any)=>{
     this.searchItems = item  ; 
+    console.log(item, 'hedha eli yjinaa') ; 
     this.myDrop._open = true
     if(this.searchItems?.length == 0 )
     {   

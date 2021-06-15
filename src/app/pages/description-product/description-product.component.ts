@@ -8,6 +8,7 @@ import * as fromRoot from '../../reducers/index' ;
 import * as fromProduct from '../../shared/reducers/product.reducer' ; 
 import {OrderProductActions} from 'src/app/shared/orderProducts/actions';
 import * as fromOrderProduct from '../../shared/reducers/orderProduct.reducers' ; 
+import { ProductsService } from 'src/app/services/products.service';
 
 @Component({
   selector: 'page-description-product',
@@ -18,14 +19,18 @@ export class DescriptionProductComponent implements OnInit {
   id :any ; 
    product!: Product;  
    path!: String; 
+   comments : any ; 
+   token : any ; 
 
-  constructor(private _Activatedroute : ActivatedRoute, private store : Store<fromProduct.State> ) { 
+  constructor(private _Activatedroute : ActivatedRoute,private productService : ProductsService, private store : Store<fromProduct.State> ) { 
+    this.token = localStorage.getItem('pharmavie_token') ; 
     this._Activatedroute.paramMap.subscribe(params=>{
       this.id  = params.get('id') ; 
-      this.store.select(fromRoot.getProductById(this.id)).subscribe(item => this.product = item) ; 
-      
+      this.productService.searchById(this.id).subscribe(item => {
+        console.log(item, "hedha l comments") ; 
+        return this.product = item }) ; 
     }) ; 
-    
+    this.productService.getComments(this.id , this.token ).subscribe(res=> console.log(res, "hedhoml les messages")) ; 
     
   }
 

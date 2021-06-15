@@ -1,7 +1,7 @@
 <div style="height:600px ;">
-<div style="background-image: url('../../../assets/map.png'); width: 468px; height: 600px;">
-    
-</div>
+<agm-map [latitude]="myLatitude" [longitude]="myLongitude" >
+  <agm-marker *ngFor="let pharmacie of product.pharmacies"  [latitude]="pharmacie.latitude" [longitude]="pharmacie.longitude"></agm-marker>
+</agm-map>
 <div class="card">
     <div class="card-body">
     <div class="row title">Pharmacy</div>

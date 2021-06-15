@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap' ; 
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap' ;
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -41,7 +41,7 @@ import { ProductsComponent } from './pages/products/products.component';
 import { PriceSliderComponent } from './components/price-slider/price-slider.component';
 import { FormsModule } from '@angular/forms';
 import { NgxSliderModule } from '@angular-slider/ngx-slider';
-import {HttpClientModule} from '@angular/common/http' ; 
+import {HttpClientModule} from '@angular/common/http' ;
 import { ActionReducer, MetaReducer, StoreModule } from '@ngrx/store';
 import { ROOT_REDUCERS } from './reducers';
 import { StoreRouterConnectingModule } from '@ngrx/router-store';
@@ -52,11 +52,12 @@ import { ProductsEffects } from './shared/products/effects/products.effects';
 import { RegisterComponent } from './components/register/register.component';
 import { HomeLayoutComponent } from './layouts/home-layout/home-layout.component';
 import { LoginLayoutComponent } from './layouts/login-layout/login-layout.component';
+import { AgmCoreModule } from '@agm/core';
 
 export function localStorageSyncReducer (reducer : ActionReducer<any>) : ActionReducer<any> {
-  return localStorageSync({keys : ['orderProducts', 'product'], rehydrate : true})(reducer) ; 
+  return localStorageSync({keys : ['orderProducts', 'product'], rehydrate : true})(reducer) ;
 }
-const metaReducers : Array<MetaReducer<any, any>> = [localStorageSyncReducer] ; 
+const metaReducers : Array<MetaReducer<any, any>> = [localStorageSyncReducer] ;
 
 @NgModule({
   declarations: [
@@ -87,13 +88,13 @@ const metaReducers : Array<MetaReducer<any, any>> = [localStorageSyncReducer] ;
     PaymentFormComponent,
     AdditionalInfosComponent,
     ConfirmationFormComponent,
-    LoginComponent, 
-    NavTreeComponent, 
-    NavProductComponent , 
-    NavProductsComponent, 
-    CategoriesListComponent, 
-    FooterComponent, 
-    BrandsFilterComponent, 
+    LoginComponent,
+    NavTreeComponent,
+    NavProductComponent ,
+    NavProductsComponent,
+    CategoriesListComponent,
+    FooterComponent,
+    BrandsFilterComponent,
     RatingsFilterComponent,
     ProductsComponent,
     PriceSliderComponent,
@@ -103,19 +104,22 @@ const metaReducers : Array<MetaReducer<any, any>> = [localStorageSyncReducer] ;
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule, 
-    NgbModule, 
-    ROUTING, 
-    FormsModule, 
-    NgxSliderModule, 
-    HttpClientModule, 
-    StoreModule.forRoot(ROOT_REDUCERS, 
-      {metaReducers}), 
-      EffectsModule.forRoot([ProductsEffects]) , 
-    StoreRouterConnectingModule.forRoot() , 
+    AgmCoreModule.forRoot({
+      apiKey:'AIzaSyBQ7vvwBISMOL3tjdtUc-1y0bnVATxF5aY'
+    }),
+    AppRoutingModule,
+    NgbModule,
+    ROUTING,
+    FormsModule,
+    NgxSliderModule,
+    HttpClientModule,
+    StoreModule.forRoot(ROOT_REDUCERS,
+      {metaReducers}),
+      EffectsModule.forRoot([ProductsEffects]) ,
+    StoreRouterConnectingModule.forRoot() ,
     StoreDevtoolsModule.instrument({
       name : 'NgRx Pharmavie app'
-    }), 
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]

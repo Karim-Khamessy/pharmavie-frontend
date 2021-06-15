@@ -1,13 +1,13 @@
 import { Component, OnChanges, OnInit } from '@angular/core';
-import {ActivatedRoute} from '@angular/router' ; 
+import {ActivatedRoute} from '@angular/router' ;
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { Product } from 'src/app/products';
 import {ProductActions} from 'src/app/shared/products/actions';
-import * as fromRoot from '../../reducers/index' ; 
-import * as fromProduct from '../../shared/reducers/product.reducer' ; 
+import * as fromRoot from '../../reducers/index' ;
+import * as fromProduct from '../../shared/reducers/product.reducer' ;
 import {OrderProductActions} from 'src/app/shared/orderProducts/actions';
-import * as fromOrderProduct from '../../shared/reducers/orderProduct.reducers' ; 
+import * as fromOrderProduct from '../../shared/reducers/orderProduct.reducers' ;
 
 @Component({
   selector: 'page-description-product',
@@ -15,25 +15,32 @@ import * as fromOrderProduct from '../../shared/reducers/orderProduct.reducers' 
   styleUrls: ['./description-product.component.css']
 })
 export class DescriptionProductComponent implements OnInit {
-  id :any ; 
-   product!: Product;  
-   path!: String; 
+  id :any ;
+   product!: Product;
+   path!: String;
 
-  constructor(private _Activatedroute : ActivatedRoute, private store : Store<fromProduct.State> ) { 
+  constructor(private _Activatedroute : ActivatedRoute, private store : Store<fromProduct.State> ) {
     this._Activatedroute.paramMap.subscribe(params=>{
-      this.id  = params.get('id') ; 
-      this.store.select(fromRoot.getProductById(this.id)).subscribe(item => this.product = item) ; 
-      
-    }) ; 
-    
-    
+      this.id  = params.get('id') ;
+      this.store.select(fromRoot.getProductById(this.id)).subscribe(item =>
+        {
+          console.log("🚀 ~ file: description-product.component.ts ~ line 26 ~ DescriptionProductComponent ~ constructor ~ product", item)
+          return this.product = item;
+
+        }
+        ) ;
+
+
+    }) ;
+
+
   }
 
   ngOnInit(): void {
-    
+
   }
 
- 
+
 
 
 }

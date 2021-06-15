@@ -1,12 +1,15 @@
+import { LatLng } from "@agm/core";
+
 export class Product {
     id : String | undefined ;
     name : String ;
     description: String;
     laboratory: String;
+    pharmacies:Pharmacie[];
     conditioning: String ;
     dosage: String ;
     form: String  ;
-    quantity : number  ; 
+    quantity : number  ;
     presentation: String ;
     therapeutiClass : String  ;
     subClass: String;
@@ -15,10 +18,12 @@ export class Product {
     publicPrice: Number;
     use: String;
     path: String;
+
     contreIndications: String;
     tableOfContent : String;
      constructor(name : string,
          description: string,
+         pharmacies:Pharmacie[],
          laboratory: string,
          conditioning: string,
          dosage: string,
@@ -35,7 +40,7 @@ export class Product {
          tableOfContent: string,
          ) {
 
-       
+       this.pharmacies = pharmacies;
        this.name = name;
        this.description = description;
        this.laboratory = laboratory;
@@ -52,6 +57,16 @@ export class Product {
        this.path = path;
        this.contreIndications = contreIndications;
        this.tableOfContent = tableOfContent;
-       this.quantity = 1 ; 
+       this.quantity = 1 ;
      }
    }
+export class Pharmacie {
+  latitude:number;
+  longitude:number;
+  nomprenom:string;
+  constructor(latitude:number,longitude:number,nomprenom:string){
+    this.latitude = latitude;
+    this.longitude = longitude;
+    this.nomprenom = nomprenom;
+  };
+}

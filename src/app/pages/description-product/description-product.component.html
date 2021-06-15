@@ -3,11 +3,11 @@
     <div class="col-6 " style="justify-content: center;">
         <div class="row">
         <div class="frame">
-            <img [src]="product.path" alt="panadol">
+            <img [src]="!product ? '' : product.path  " alt="panadol">
 
         </div>
     </div>
-        <app-pharmacy-map></app-pharmacy-map>
+        <app-pharmacy-map [product]="product"></app-pharmacy-map>
         <app-pharmacy-card></app-pharmacy-card>
     </div>
     <div class="col-6">

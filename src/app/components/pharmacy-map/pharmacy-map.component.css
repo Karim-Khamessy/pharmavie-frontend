@@ -1,19 +1,19 @@
 .card{
-    position : relative ; 
+    position : relative ;
     top: -595px;
     right: 0px ;
     width: 468px;
     height: 148px;
-    border-radius : 15px ; 
+    border-radius : 15px ;
 }
 button {
-    border-radius : 100px ; 
+    border-radius : 100px ;
 }
 
 .title{
     justify-content: center;
     margin-bottom: 10px;
-    font-size:22px; 
+    font-size:22px;
     font-weight: bold;
 }
 .card-body{
@@ -21,6 +21,11 @@ button {
 }
 .subtitle{
     font-size: 12px;
-    color : #A9A9A9 ; 
-    margin-bottom: 20px; 
+    color : #A9A9A9 ;
+    margin-bottom: 20px;
+}
+
+agm-map{
+  width:468px;
+  height:600px;
 }

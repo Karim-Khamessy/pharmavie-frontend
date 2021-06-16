@@ -1,6 +1,7 @@
+<app-navbar [items]= "orderProducts$ | async"></app-navbar>
 <div class="container">
 <div class="row">
-    <app-nav-tree></app-nav-tree>
+    <app-nav-tree [category]="category" ></app-nav-tree>
 </div>
 <div class="row">
     <div class="col-3">

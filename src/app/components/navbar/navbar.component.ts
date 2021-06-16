@@ -34,7 +34,6 @@ searchItem(value : String){
   if (value.length >0){
   this.productService.searchProduct(value.toLowerCase()).subscribe((item : any)=>{
     this.searchItems = item  ; 
-    console.log(item, 'hedha eli yjinaa') ; 
     this.myDrop._open = true
     if(this.searchItems?.length == 0 )
     {   
@@ -59,6 +58,7 @@ handleClose (){
 logout(){
   localStorage.removeItem('pharmavie_token') ; 
   this.route.navigate(["landingPage"]) ;
+  this.token= null ; 
 
 
 }

@@ -13,11 +13,14 @@ export class ExtendedCardComponent implements OnInit {
   currentRate = 4;
   @Input()
   product!: Product; 
+  isPromotion : any ; 
   
   
   constructor(private cartService : CartService , private store : Store<fromOrderProduct.State>) { }
 
   ngOnInit(): void {
+    console.log(this.product ,"haw l prosuct") ; 
+    this.isPromotion = this.product.isPromotion ; 
   }
   addtoCart () {
     console.log('product added to cart') ; 

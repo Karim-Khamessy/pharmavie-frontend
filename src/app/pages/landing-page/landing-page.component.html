@@ -1,3 +1,4 @@
+<app-navbar [items]= "products$ | async"></app-navbar>
 <div class="container">
 <app-landing-carousel></app-landing-carousel>
 <app-best-products [products]="bestSellingProducts$ | async"></app-best-products>

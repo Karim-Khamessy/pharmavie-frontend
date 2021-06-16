@@ -104,33 +104,20 @@ const metaReducers : Array<MetaReducer<any, any>> = [localStorageSyncReducer] ;
   ],
   imports: [
     BrowserModule,
-<<<<<<< HEAD
-    AppRoutingModule, 
-    ReactiveFormsModule, 
-    NgbModule, 
-    ROUTING, 
-    FormsModule, 
-    NgxSliderModule, 
-    HttpClientModule, 
-    StoreModule.forRoot(ROOT_REDUCERS, 
-      {metaReducers}), 
-      EffectsModule.forRoot([ProductsEffects]) , 
-    StoreRouterConnectingModule.forRoot() , 
-=======
     AgmCoreModule.forRoot({
-      apiKey:'AIzaSyBQ7vvwBISMOL3tjdtUc-1y0bnVATxF5aY'
+      apiKey:'AIzaSyC3Dst3oP6M8VV2lyJDmtwQ0bnh1yxhpQ0'
     }),
     AppRoutingModule,
     NgbModule,
     ROUTING,
     FormsModule,
+    ReactiveFormsModule, 
     NgxSliderModule,
     HttpClientModule,
     StoreModule.forRoot(ROOT_REDUCERS,
       {metaReducers}),
       EffectsModule.forRoot([ProductsEffects]) ,
     StoreRouterConnectingModule.forRoot() ,
->>>>>>> 66ada4c560ea56c79e4f1ed5f349541c5ac9ae77
     StoreDevtoolsModule.instrument({
       name : 'NgRx Pharmavie app'
     }),

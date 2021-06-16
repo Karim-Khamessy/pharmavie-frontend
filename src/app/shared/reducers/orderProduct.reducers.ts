@@ -27,6 +27,8 @@ export const reducer = createReducer(
     ) , 
     on(OrderProductActions.removeFromCart , (state, {product}) =>({ products : state.products.filter(pro => pro.id !== product.id )})
 ), 
+on(OrderProductActions.clearCart, (state)=>({ products :[]} ))
+,
 on(OrderProductActions.ChangeQuantity,( state,{product})=>{
     const index = state.products.findIndex(item => item.id == product.id); 
     let newElements = [...state.products] ; 
@@ -34,5 +36,6 @@ on(OrderProductActions.ChangeQuantity,( state,{product})=>{
     return ({products : newElements }) ; 
 
 }) ) ; 
+
 
 export const selectProducts = (state : State) => state.products ; 

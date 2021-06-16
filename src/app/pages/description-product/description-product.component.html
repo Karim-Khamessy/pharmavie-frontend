@@ -1,9 +1,10 @@
+<app-navbar [items]= "products$ | async"></app-navbar>
 <div class="container">
 <div class="row justify-content-center">
     <div class="col-6 " style="justify-content: center;">
         <div class="row">
         <div class="frame">
-            <img [src]="!product ? '' : product.path  " alt="panadol">
+            <img [src]="product.path" alt="panadol">
 
         </div>
     </div>
@@ -12,12 +13,12 @@
     </div>
     <div class="col-6">
         <app-product-description [product]= "product" ></app-product-description>
-        <app-description-review [id]="id"></app-description-review>
+        <app-description-review [product]="product" [id]="id"></app-description-review>
     </div>
 
 
 </div>
-<app-related-products></app-related-products>
+<app-related-products [products]="relatedProducts"></app-related-products>
 <app-footer></app-footer>
 </div>
 

@@ -1,5 +1,5 @@
 <div style="width: 570px;">
-    <span class="badge bg-light ">-35 %</span>
+    <span *ngIf="product.isPromotion" class="badge bg-light ">-35 %</span>
     <span class="badge bg-light ">Free Shopping</span>
 
     <div class="row title">
@@ -24,15 +24,15 @@
                             Trade name
                         </td>
                         <td class="t2">
-                            Panadol
+                            {{ product.name | uppercase}}
                         </td>
                     </tr>
                     <tr>
                         <td class="t1">
-                            Dosage
+                            Conditionning
                         </td>
                         <td class="t2">
-                            1g
+                            {{product.conditioning | uppercase}}
                         </td>
                     </tr>
                     <tr>
@@ -41,7 +41,7 @@
                     </tr>
                     <tr>
                         <td class="t1">Form</td>
-                        <td class="t2">Comprimé pélliculé sécab</td>
+                        <td class="t2">{{ product.form | uppercase }}</td>
                     </tr>
                     
                     
@@ -53,11 +53,11 @@
                 <tbody>
                     <tr>
                         <td class="t1">Dci</td>
-                        <td class="t2">1 day old</td>
+                        <td class="t2">{{ product.DurationOfConversation }}</td>
                     </tr>
                     <tr>
                         <td class="t1">Laboratory</td>
-                        <td class="t2">TERIAK</td>
+                        <td class="t2">{{ product.laboratory | uppercase }}</td>
                     </tr>
                     <tr>
                         <td class="t1">Specification</td>
@@ -65,7 +65,7 @@
                     </tr>
                     <tr>
                         <td class="t1">Présentation</td>
-                        <td class="t2">B/8</td>
+                        <td class="t2">{{ product.presentation | uppercase}}</td>
                     </tr>
                     
                     
@@ -83,8 +83,8 @@
     </div>
     <div class="row">
         <div class="col">
-            <div  style="font-size:20px; font-weight: bold ; color : #7854F7 ;"> 2.560 DT</div>
-            <div style="color : #A9A9A9"><s>3.200 DT</s></div>
+            <div  style="font-size:20px; font-weight: bold ; color : #7854F7 ;"> {{ product.publicPrice }} TND</div>
+            <div *ngIf="product.isPromotion" style="color : #A9A9A9"><s>{{ product.newPrice }} TND</s></div>
         </div>
         <div class="col-3">
             <div class="row align-items-center">

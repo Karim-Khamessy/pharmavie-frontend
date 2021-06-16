@@ -16,12 +16,12 @@ export class LandingPageComponent implements OnInit {
 
   bestSellingProducts$ : Observable<Product[]> ;
   promoProducts$ : Observable<Product[]> ;
-
+  products$ : Observable<Product[]> ; 
 
   constructor(private store : Store<fromProduct.State>) {
     this.bestSellingProducts$ = this.store.select(fromRoot.selectBestSellingProducts) ; 
     this.promoProducts$ = this.store.select(fromRoot.selectPromoProducts) ; 
-    
+    this.products$ = this.store.select(fromRoot.selectOrderProducts) ; 
    }
 
   ngOnInit(): void {

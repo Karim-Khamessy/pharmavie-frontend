@@ -3,7 +3,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent" style="justify-content: center;">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0" *ngFor="let item of Category">
     
-          <li class="nav-item" [routerLink]="['/category', item.value]" routerLinkActive="router-link-active"  (click)="navCategory(item.value)" >
+          <li class="nav-item" [routerLink]="['/category', item.value]" routerLinkActive="active"  (click)="navCategory(item.value)" >
             <div class="nav-link" role="button">
               {{item.name}}
             </div>

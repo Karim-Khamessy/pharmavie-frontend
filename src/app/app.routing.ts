@@ -11,6 +11,7 @@ import { ProductsComponent } from './pages/products/products.component';
 
 
 const APP_ROUTING : Routes =[
+  
     { path: 'landingPage' , component : LandingPageComponent} , 
   {path: 'description/:id', component: DescriptionProductComponent}, 
   {path: 'category/:name', component:ProductsComponent }, 

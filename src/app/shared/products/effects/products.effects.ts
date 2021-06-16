@@ -24,7 +24,9 @@ export class ProductsEffects {
                 concatMap((action : {category: string })=> { 
                     return this.productService.getProductsByCategory(action.category)
                 .pipe(
-                    map(product => ProductActions.addToCart({product : product}) ), 
+                    map(product => { 
+                        console.log(product, "haehdddddd ech anana") ; 
+                        return ProductActions.addToCart({product : product})} ), 
                     catchError(()=> EMPTY)
                 )}),
     )}) ;

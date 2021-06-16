@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-nav-tree',
@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nav-tree.component.css']
 })
 export class NavTreeComponent implements OnInit {
-
+@Input() category : any ; 
   constructor() { }
 
   ngOnInit(): void {

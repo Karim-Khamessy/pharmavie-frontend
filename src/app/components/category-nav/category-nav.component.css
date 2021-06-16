@@ -2,6 +2,7 @@ li{
     font-size: 15px;
     font-weight: bold;
     color : black
+ 
 }
 nav{
     background-color: #F9F9F9;
@@ -10,4 +11,14 @@ nav{
     border-radius: 12px;
     margin-bottom: 10px;
     
+}
+
+.active{
+    color :#7854F7
+    ; 
+}
+
+li:hover{
+    color : #7854F7  ; 
+    opacity: 50%;
 }

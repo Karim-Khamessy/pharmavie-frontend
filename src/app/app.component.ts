@@ -1,5 +1,5 @@
 import { Component, ElementRef, Inject, ViewChild } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router'; 
+import { Routes, RouterModule, Router } from '@angular/router'; 
 import { Observable } from 'rxjs';
 import { DescriptionProductComponent } from './pages/description-product/description-product.component';
 import { LandingPageComponent } from './pages/landing-page/landing-page.component';
@@ -15,14 +15,15 @@ import { Store } from '@ngrx/store';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  products$ : Observable<Product[]> ; 
+ 
   title = 'pharmavie-frontend';
 
-  constructor( private state : Store<fromOrderProduct.State>) { 
-    this.products$ = state.select(fromRoot.selectOrderProducts) ; 
+  constructor( private state : Store<fromOrderProduct.State>, private router : Router) { 
+    
 
   }
 
+ 
   resetPosition(event : Event){
     window.scrollTo(0,0) ; 
   }

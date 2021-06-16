@@ -8,3 +8,11 @@ a{
     border-top-color: white;
     border-left-color: white;
 }
+
+button{
+    margin-left:  200px;
+    margin-top: 10px;
+}
+i{
+    cursor: pointer;
+}

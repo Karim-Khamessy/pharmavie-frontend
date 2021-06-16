@@ -16,18 +16,18 @@
                     <ngb-rating [(rate)]="product.rating" [max]="5"></ngb-rating>
                 </div>
             <div class="row">
-                <div class="col">Freshness</div>
-                <div class="col">New (Extra Fresh)</div>
+                <div class="col">Form</div>
+                <div class="col">{{ product.form }}</div>
 
             </div>
             <div class="row">
-                <div class="col">Farm</div>
-                <div class="col">Gracery Tarm Fields</div>
+                <div class="col">Laboratory</div>
+                <div class="col">{{ product.laboratory }}</div>
 
             </div>
             <div class="row">
-                <div class="col">Delievery</div>
-                <div class="col">Europe</div>
+                <div class="col">Conservation</div>
+                <div class="col">{{ product.DurationOfConversation}}</div>
 
             </div>
             <div class="row">
@@ -42,8 +42,8 @@
                 <div class="col-12">
                     <p class="card-title">{{ product.publicPrice }} TND</p>
                 </div>
-                <div class="col-12">
-                    <p class="card-subtitle"><s>48.5 USD</s></p>
+                <div class="col-12"  *ngIf="isPromotion">
+                    <p class="card-subtitle"><s>{{ product.newPrice }} TND</s></p>
                 </div>
                 <div class="col-12">
                     <p class="card-subtitle">Free Shiping</p>
@@ -52,7 +52,7 @@
                     <p class="card-subtitle">Delivery in 1 day</p>
                 </div>
                 <div class="col-12">
-                    <button class="product btn" [routerLink]="['/description',product.id]"  >
+                    <button class="product btn" [routerLink]="['/description', product.id]"  >
                         Product Detail  >
                     </button>
                 </div>

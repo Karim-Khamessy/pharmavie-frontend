@@ -12,16 +12,16 @@
                 {{product.name?.toString() | uppercase}}
             </div>
             <div class="row">
-                <div class="col-4 details">Farm : </div>
-                <div class="col-8">Tharamis Farm</div>
+                <div class="col-4 details">Laboratory</div>
+                <div class="col-8">{{ product.laboratory.toString() | uppercase}}</div>
             </div>
             <div class="row">
-                <div class="col-4 details">Freshness: </div>
-                <div class="col-8">1 day old</div>
+                <div class="col-4 details">Category </div>
+                <div class="col-8">{{ product.category }}</div>
             </div>
             <div class="row">
                 <div class="col-12">
-                <ngb-rating [(rate)]="currentRate" [max]="5">
+                <ngb-rating [(rate)]="product.rating" [max]="5">
                     <ng-template let-fill="fill" let-index="index">
                     <span class="star" [class.full]="fill === 100">&#9733;</span>
                 </ng-template>
@@ -31,10 +31,10 @@
             <div class="row justify-content-between">
                 <div class="col-6">
                     <div class="row price">
-                        {{product.publicPrice}} DT 
+                        {{product.publicPrice}} TND 
                     </div>
-                    <div class="row details">
-                       <strong> <s>48.56 USD</s> </strong>
+                    <div *ngIf="product.isPromotion" class="row details">
+                       <strong> <s>{{ product.newPrice }}</s> </strong>
                     </div>
                 </div>
                 <div class="col-5">

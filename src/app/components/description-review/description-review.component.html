@@ -39,26 +39,29 @@
       </ng-template>
     </ng-container>
     <ng-container ngbNavItem>
-      <a ngbNavLink>
-        <span style="color : #7854F7" class="badge rounded-pill bg-light">14</span>  
-        Reviews</a>
-      <ng-template ngbNavContent>
-        <p>Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko
-          farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts
-          ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar
-          helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson
-          8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester
-          stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.</p>
-      </ng-template>
-    </ng-container>
-    <ng-container ngbNavItem>
-      <a ngbNavLink>Questions</a>
+      <a ngbNavLink>Reviews
+      <span style="color : #7854F7" class="badge rounded-pill bg-light">{{product.comments.length}}</span>  
+    </a>
       <ng-template ngbNavContent>
        <form >
-         <label for="comment">Comments</label>
-         <input #comment class="form-control" type="text" name="comment" id="comment">
+         <input #comment placeholder="Add a comment or a question here .." class="form-control" type="text" name="comment" id="comment">
        </form>
        <button class="btn btn-secondary" (click)="addComments(comment.value)">Add Comment</button>
+       <ul *ngFor="let comment of product.comments" class="list-group list-group-flush">
+          
+        <div class="card p-3 mt-2">
+          <div class="d-flex justify-content-between align-items-center">
+              <div class="user d-flex flex-row align-items-center">
+                 <img src="https://i.imgur.com/C4egmYM.jpg" width="30" class="user-img rounded-circle mr-2">
+                  <span><small class="font-weight-bold text-primary">{{comment.username}}</small>
+                     </span> </div> <small>{{ comment.createdAt | date}}</small>
+          </div>
+          <div class="action d-flex justify-content-between mt-2 align-items-center">
+              <div class="reply px-4"> <small>{{comment.text}}</small> <span class="dots"></span> </div>
+              <div class="icons align-items-center"> <i (click)="deleteComment(comment._id)" class="fa fa-close"></i> </div>
+          </div>
+      </div>
+       </ul>
       </ng-template>
     </ng-container>
   </nav>

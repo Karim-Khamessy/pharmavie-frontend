@@ -14,4 +14,7 @@ export const ChangeQuantity = createAction(
     '[OrderProducts] Change quantity' , 
     props<{product : Product}>()
 ); 
+export const clearCart = createAction(
+    '[OrderProducts] clearCart' 
+) ; 
 

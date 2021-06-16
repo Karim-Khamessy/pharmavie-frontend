@@ -36,7 +36,7 @@ export const reducer = createReducer(
     on(ProductActions.addToBestSellingProduts ,(state, {product}) =>  {
         return ({...state , bestSellingProducts :  product })
     }
-    ) , 
+    ) ,
     on(ProductActions.removeFromCart , (state, {product}) =>({...state ,  products : state.products.filter(pro => pro.id !== product.id )})
 )
 ) ; 

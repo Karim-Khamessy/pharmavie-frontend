@@ -4,13 +4,13 @@
 </div>
     <div class="card-body">
       <p class="card-title">{{product.name}}</p>
-      <p class="card-subtitle mb-2 text-muted">Space for a small product description hello there =hdhsjfkqh</p>
+      <p class="card-subtitle mb-2 text-muted">{{product.description}}</p>
       <div class="row justify-content-between">
           <div class="col-4">
-              <p><strong>2.5 DT</strong></p>
+              <p><strong>{{product.newPrice}} TND</strong></p>
           </div>
           <div class="justify-content-end">
-              <button class="btn">Buy now</button>
+              <button class="btn" [routerLink]="['/description', product.id]" routerLinkActive="router-link-active" >Buy now</button>
           </div>
       </div>
     </div>

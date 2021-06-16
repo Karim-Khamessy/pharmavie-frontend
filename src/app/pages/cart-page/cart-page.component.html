@@ -1,3 +1,4 @@
+<app-navbar [items]= "products$ | async"></app-navbar>
 <div class="container">
 <div class="row">
     <div class="col-7">
@@ -11,7 +12,7 @@
             <app-additional-infos></app-additional-infos>
         </div>
         <div class="row">
-            <app-confirmation-form></app-confirmation-form>
+            <app-confirmation-form [products]="products"></app-confirmation-form>
         </div>
     </div>
     <div class="col-5">
@@ -19,9 +20,9 @@
             <app-billing-list [products]= "products$ | async"></app-billing-list>
 
         </div>
-    <div class="row">
+    <!-- <div class="row">
         <app-pharmacy-map></app-pharmacy-map>
-    </div>
+    </div> -->
     </div>
 </div>
 </div>

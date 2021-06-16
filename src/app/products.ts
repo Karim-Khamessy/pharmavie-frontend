@@ -9,6 +9,7 @@ export class Product {
     conditioning: String ;
     dosage: String ;
     form: String  ;
+    rating : number ; 
     quantity : number  ;
     presentation: String ;
     therapeutiClass : String  ;
@@ -16,13 +17,12 @@ export class Product {
     specification: String;
     DurationOfConversation: String;
     publicPrice: Number;
+    newPrice : Number  ; 
+    isPromotion : boolean; 
+    isBestSelling : boolean ; 
     use: String;
     path: String;
-<<<<<<< HEAD
-    rating : number ; 
-=======
-
->>>>>>> 66ada4c560ea56c79e4f1ed5f349541c5ac9ae77
+    category : string ; 
     contreIndications: String;
     tableOfContent : String;
      constructor(name : string,
@@ -42,9 +42,14 @@ export class Product {
          path: string,
          contreIndications: string,
          tableOfContent: string,
-         rating : number
+         rating : number , 
+         isPromotion : boolean , 
+         isBestSelling : boolean ,
+         newPrice : Number , 
+         category : string
          ) {
 
+      this.rating = rating ; 
        this.pharmacies = pharmacies;
        this.name = name;
        this.description = description;
@@ -62,12 +67,11 @@ export class Product {
        this.path = path;
        this.contreIndications = contreIndications;
        this.tableOfContent = tableOfContent;
-<<<<<<< HEAD
-       this.quantity = 1 ; 
-       this.rating = rating
-=======
        this.quantity = 1 ;
->>>>>>> 66ada4c560ea56c79e4f1ed5f349541c5ac9ae77
+       this.isBestSelling=isBestSelling ;
+       this.newPrice = newPrice ; 
+       this.isPromotion = isPromotion ; 
+       this.category = category ; 
      }
    }
 export class Pharmacie {

@@ -59,7 +59,7 @@ export class ProductsService {
     }
     value.price.minValue !== 0 ? minValue= value.price.minValue : null ;   
     console.log(minValue,rating, labo ,'hedhim les params') ; 
-    return this.http.get<Product[]>(`${this.baseUrl}/get/${minValue}/${value.price.maxValue}/${labo}/${rating}`)
+    return this.http.get(`${this.baseUrl}/get/${minValue}/${value.price.maxValue}/${labo}/${rating}`)
   }
 
 
@@ -73,5 +73,11 @@ export class ProductsService {
     const header  = new HttpHeaders().set('Authorization',`Bearer ${token}`) ; 
     const headers = { headers : header} ;
     return this.http.get(`${this.baseUrl}/comments/${id}`,headers) ; 
+  }
+  deleteCommetns(productId : any, commentId : any) : Observable<any>{
+     let token = localStorage.getItem("pharmavie_token") ; 
+    const header  = new HttpHeaders().set('Authorization',`Bearer ${token}`) ; 
+    const headers = { headers : header} ;
+    return this.http.delete(`${this.baseUrl}/comment/${productId}/${commentId}`,headers) ; 
   }
 }

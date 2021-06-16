@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-related-products',
@@ -7,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RelatedProductsComponent implements OnInit {
  image ='../../../assets/product.svg' ; 
+ @Input() products : any 
   constructor() { }
-
   ngOnInit(): void {
   }
 

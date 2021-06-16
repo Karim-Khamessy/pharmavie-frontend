@@ -20,10 +20,12 @@ export class ProductsComponent implements OnInit{
   category : any ; 
   length : any ; 
   products$!: Observable<Product[]>; 
+  orderProducts$!: Observable<Product[]> ; 
   constructor(private store : Store<fromProduct.State>,private _Activatedroute : ActivatedRoute , private productService : ProductsService,private formBuilder: FormBuilder ) { 
     this._Activatedroute.paramMap.subscribe(params=>{
       this.category  = params.get('name') ; 
       this.products$ = this.store.select(fromRoot.selectProducts) ;
+      this.orderProducts$ = this.store.select(fromRoot.selectOrderProducts) ; 
       this.products$.subscribe(item => this.length =  item.length) ; 
       this.filterForm = this.formBuilder.group({
         labo : [], 
@@ -49,7 +51,7 @@ getProductsByCategory () : void {
 }
 
 getProducts () : void {
-  this.store.dispatch(ProductActions.loadProduct({offset : '1' , limit:'2'})) ; 
+  this.store.dispatch(ProductActions.loadProduct({offset : '1' , limit:'4'})) ; 
 }
 handleSubmit(){
   console.log(this.filterForm.value) ; 
